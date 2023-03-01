@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <header></header>
+    <form>
+      <div class="inputs">
+        <div class="info">
+          <label for="mail">
+            <span>Your email:</span>
+            <input
+              class="input"
+              type="email"
+              id="mail"
+              name="mail"
+              required="required"
+            />
+            <span class="error" aria-live="polite"></span>
+          </label>
+          <label for="country">
+            <span>Your country:</span>
+            <input
+              class="input"
+              type="text"
+              pattern="\D{2,20}"
+              id="country"
+              name="country"
+              required="required"
+            />
+            <span class="error" aria-live="polite"></span>
+          </label>
+          <label for="zip_code">
+            <span>Your Zip Code:</span>
+            <input
+              class="input"
+              type="text"
+              id="zip_code"
+              name="zip_code"
+              pattern="\d{6}"
+              minlength="6"
+              maxlength="6"
+              required="required"
+            />
+            <span class="error" aria-live="polite"></span>
+          </label>
+        </div>
+        <div class="passwords">
+          <label for="pass">
+            <span>Password (at least 8 characters):</span>
+            <input
+              class="input"
+              type="password"
+              id="pass"
+              name="pass"
+              minlength="8"
+              required="required"
+            />
+            <span class="error" aria-live="polite"></span>
+          </label>
+          <label for="pass_confirm">
+            <span>Confirm your password:</span>
+            <input
+              class="input"
+              type="password"
+              id="pass_confirm"
+              name="pass_confirm"
+              required="required"
+            />
+            <span class="error" aria-live="polite"></span>
+          </label>
+        </div>
+      </div>
+      <div class="submitWrapper">
+        <button>Sign in</button>
+      </div>
+    </form>
+    <footer></footer>
+    <script src="index.js"></script>
+  </body>
+</html>
